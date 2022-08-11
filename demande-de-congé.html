@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+    <head>
+  
+        <title>leoni
+            
+        </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->	
+        <link rel="icon" type="image/png" href="images/download.png"/>
+        <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/util.css">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    
+        <script type="text/javascript">
+      
+          $(window).on('scroll',function(){
+            if($(window).scrollTop()){
+              $('nav').addClass('black');
+            }
+            else
+            {
+              $('nav').removeClass('black');
+            }
+          })
+      
+        </script>
+      
+    </head>
+<body>
+   
+	<header>
+		<div class="vanilla_container">
+			<nav class="nav-container">
+				<div class="logo"><a href="#"><img src="images/Picture2.png"
+							style="width: 150px;margin-top: 10px;"></a></div>
+				<!--         <div class="logo-isit"><img src="img/isit_logo.png" alt="logo-isitcom"></div>
+	 -->
+				<div class="links">
+					<ul>
+						<li><a href="home.html">Home</a></li>
+
+						<div class="dropdown">
+							<button class="btn  dropdown-toggle" type="button" id="dropdownMenuButton"
+								data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								Services
+							</button>
+							<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+								<a class="dropdown-item" href="demande-de-congé.html">Demande de congé</a>
+								<a class="dropdown-item" href="demande-de-stage.html">demande de stage</a>
+								<a class="dropdown-item" href="recrutement.html">Recrutrement</a>
+							</div>
+						</div>
+						<div class="dropdown">
+							<button class="btn  dropdown-toggle" type="button" id="dropdownMenuButton"
+								data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								Evenements
+							</button>
+							<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+								<a class="dropdown-item" href="participation-evenement.html">Participation d'évenement</a>
+								<a class="dropdown-item" href="proposition-evenement.html">Proposition d'évenement</a>
+							</div>
+						</div>
+						<li><a href="profile.html">Profile</a></li>
+					</ul>
+				</div>
+
+			</nav>
+
+		</div>
+	</header>
+      <div class="content">
+    
+        <div class="container">
+          <div class="row align-items-stretch no-gutters contact-wrap">
+            <div class="col-md-8">
+              <div class="form h-100">
+                <h3>Demande de congé</h3>
+                <form class="mb-5" method="post" id="contactForm" name="contactForm">
+                  <div class="row">
+                    <div class="col-md-6 form-group mb-5">
+                      <label for="" class="col-form-label">Nom *</label>
+                      <input type="text" class="form-control" name="name" id="name" placeholder="Votre nom">
+                    </div>
+                    <div class="col-md-6 form-group mb-5">
+                        <label for="" class="col-form-label">Prenom *</label>
+                        <input type="text" class="form-control" name="name" id="name" placeholder="Votre prénom">
+                      </div>
+                    <div class="col-md-6 form-group mb-5">
+                      <label for="" class="col-form-label">Email *</label>
+                      <input type="text" class="form-control" name="email" id="email"  placeholder="Votre email">
+                    </div>
+                  </div>
+    
+                  <div class="row">
+                    <div class="col-md-6 form-group mb-5">
+                      <label for="" class="col-form-label">Numéro de telephone *</label>
+                      <input type="number" class="form-control" name="phone" id="phone"  placeholder="Numéro de telephone ">
+                    </div>
+                    <div class="col-md-6 form-group mb-5">
+                      <label for="" class="col-form-label">Nombre de jour *</label>
+                      <input type="number" class="form-control" name="company" id="nb-jour"  placeholder="nb">
+                    </div>
+                  </div>
+    
+                  <div class="row">
+                    <div class="col-md-12 form-group mb-5">
+                      <label for="Requete" class="col-form-label">Requète *</label>
+                      <textarea class="form-control" name="Requet" id="Requete" cols="30" rows="4"  placeholder=" message"></textarea>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12 form-group">
+                      <input type="submit" value="Envoyer Requete" class="btn btn-primary rounded-0 py-2 px-4">
+                      <span class="submitting"></span>
+                    </div>
+                  </div>
+                </form>
+    
+                <div id="form-message-warning mt-4"></div> 
+                <div id="form-message-success">
+                  Your message was sent, thank you!
+                </div>
+    
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="contact-info h-100">
+                <h3>Contact Information</h3>
+               
+                <ul class="list-unstyled">
+                  <li class="d-flex">
+                    <span class="wrap-icon icon-room mr-3"></span>
+                    <span class="text">Zone Industrielle – Messadine
+                      4013 Messadine M'Saken Sousse, Tunisie</span>
+                  </li>
+                  <li class="d-flex">
+                    <span class="wrap-icon icon-phone mr-3"></span>
+                    <span class="text">+216 31302000/+216 73323830
+                    </span>
+                  </li>
+                  <li class="d-flex">
+                    <span class="wrap-icon icon-envelope mr-3"></span>
+                    <span class="text">contact@tunipages.com/span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+      </div>
+      <footer class="site-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 col-md-6">
+              <h5 style="color: rgb(193, 189, 189);">About</h5>
+              <br>
+              <h6 class="text-justify" > LEONI Tunisie est spécialisée dans la fabrication des câbles électroniques et électriques destinés au secteur automobile et plus particulièrement à la marque Mercedes.</h6>
+            </div>
+    
+            <div class="col-xs-6 col-md-3">
+              <h5 style="color: rgb(193, 189, 189);">Services</h5>
+              <br>
+              <ul class="footer-links">
+                <li><a href="demande-de-congé.html"> <h6>Demande de congé</h6> </a></li>
+                <li><a href="demande-de-stage.html"> <h6>Demande de stage</h6> </a></li>
+                <li><a href="recrutement.html"><h6>Recrutrement</h6> </a></li>
+                
+              </ul>
+            </div>
+    
+            <div class="col-xs-6 col-md-3">
+              <h5 style="color: rgb(193, 189, 189);">Evenements</h5>
+              <br>
+              <ul class="footer-links">
+                <li><a href="participation-evenement.html"> <h6>Participation d'evenement</h6> </a></li>
+                <li><a href="proposition-evenement.html"> <h6>Proposition d'evenement </h6> </a></li>
+                
+              </ul>
+            </div>
+          </div>
+          <hr>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-sm-6 col-xs-12">
+              <p class="copyright-text">
+                Zone Industrielle – Messadine 4013 Messadine M'Saken Sousse, Tunisie
+              </p>
+            </div>
+    
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <ul class="social-icons">
+                <li><a class="facebook" href="https://www.facebook.com/annuaireprotunisie"><i class="fa fa-facebook"></i></a></li>
+                <li><a class="twitter" href="https://twitter.com/Tunipages1"><i class="fa fa-twitter"></i></a></li>
+              
+                <li><a class="linkedin" href="https://www.linkedin.com/company/leoni-tunisia/?originalSubdomain=tn"><i class="fa fa-linkedin"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+  <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

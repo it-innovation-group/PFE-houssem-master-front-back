@@ -10,6 +10,7 @@
     <!--===============================================================================================-->	
         <link rel="icon" type="image/png" href="images/download.png"/>
         <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+        <script src="https://static.filestackapi.com/filestack-js/3.x.x/filestack.min.js"></script>
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="css/util.css">
@@ -80,46 +81,63 @@
             <div class="col-md-8">
               <div class="form h-100">
                 <h3>Demande de stage</h3>
-                <form class="mb-5" method="post" id="contactForm" name="contactForm">
+                <form  name="f" class="mb-5" method="post" id="contactForm" name="contactForm" onsubmit="return false" >
                   <div class="row">
                     <div class="col-md-6 form-group mb-5">
-                      <label for="" class="col-form-label">Nom *</label>
-                      <input type="text" class="form-control" name="name" id="name" placeholder="Votre nom">
+                      <label for="" class="col-form-label">Nom et Prenom*</label>
+                      <input type="text" class="form-control" name="T1" id="name" placeholder=" Ajoute Votre Nom et Prenom">
                     </div>
-                    <div class="col-md-6 form-group mb-5">
-                        <label for="" class="col-form-label">Prenom *</label>
-                        <input type="text" class="form-control" name="name" id="name" placeholder="Votre prénom">
-                      </div>
+                   
                     <div class="col-md-6 form-group mb-5">
                       <label for="" class="col-form-label">Email *</label>
-                      <input type="text" class="form-control" name="email" id="email"  placeholder="Votre email">
+                      <input type="text" class="form-control" name="T2" id="email"  placeholder="Ajoute Votre email">
                     </div>
+                    <div class="col-md-6 form-group mb-5">
+                        <label for="" class="col-form-label">CIN *</label>
+                        <input type="text" class="form-control" name="T3" id="cin"  placeholder=" Ajoute votre Votre CIN">
+                      </div>
+                      <div class="col-md-6 form-group mb-5">
+                        <label for="" class="col-form-label">Adresse *</label>
+                        <input type="text" class="form-control" name="T4" id="addr"  placeholder="Ajoute votre Adresse">
+                      </div>
                   </div>
     
                   <div class="row">
-                    <div class="col-md-6 form-group mb-5">
+                    <div class="col-md-8 form-group mb-5">
+                        <label for="" class="col-form-label">Numéro de telephone *</label>
+                        <input type="text" class="form-control" name="T5" id="tel"  placeholder="Ajoute votre Numéro de telephone ">
+                      </div>
+                   </div> 
+                   <div class="row">
+                    <div class="col-md-8 form-group mb-5">
 						<label for="" class="col-form-label">Type de stage *</label>
-						<select class="form-control">
-							<option>SFE</option>
-							<option>PFE</option>
-						  </select>
+						      <select class="form-control" name="D1" id="type" >
+                    <option> </option>
+						      	<option> stage SFE</option>
+						      	<option> stage PFE</option>
+                    <option> stage d'été</option>
+						          </select>
                     </div>
                    </div> 
-				  
-    
+          
                   <div class="row">
-                    <div class="col-md-12 form-group mb-5">
+                    <div class="col-md-8 form-group mb-5">
                       <label for="Requete" class="col-form-label">Lettre de motivation *</label>
-                      <textarea class="form-control" name="Requet" id="Requete" cols="30" rows="4"  placeholder=" message"></textarea>
+                      <input type="text" class="form-control" name="T7" placeholder=" Ajoute votre lettre de motivation " onclick="send()"
+                      id="ii" >
                     </div>
                   </div>
-				  <div class="form-group">
-					<label for="exampleFormControlFile1">CV</label>
-					<input type="file" class="form-control-file" id="exampleFormControlFile1">
-				  </div>
+				  
+          <div class="row">
+            <div class="col-md-8 form-group mb-5">
+              <label for="Requete" class="col-form-label">cv *</label>
+              <input type="text" class="form-control" name="T8"   placeholder="Ajoute votre cv" onclick="send1()"
+              id="i1" >
+            </div>
+          </div>
                   <div class="row">
                     <div class="col-md-12 form-group">
-                      <input type="submit" value="Envoyer " class="btn btn-primary rounded-0 py-2 px-4">
+                      <input type="submit" value="Envoyer " class="btn btn-primary rounded-0 py-2 px-4" onclick="add()" >
                       <span class="submitting"></span>
                     </div>
                   </div>
@@ -210,7 +228,6 @@
         </div>
       </footer>
   <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
-	<script src="vendor/bootstrap/js/popper.js"></script>
-	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="js/stage.js"></script>
 </body>
 </html>

@@ -79,46 +79,47 @@
             <div class="col-md-8">
               <div class="form h-100">
                 <h3>Participation d'évenement</h3>
-                <form class="mb-5" method="post" id="contactForm" name="contactForm">
+                <form  class="mb-5" method="post" id="contactForm" name="f" onsubmit="return false" >
                   <div class="row">
                     <div class="col-md-6 form-group mb-5">
-                      <label for="" class="col-form-label">Nom *</label>
-                      <input type="text" class="form-control" name="name" id="name" placeholder="Votre nom">
+                      <label for="" class="col-form-label">Nom  et Prenom*</label>
+                      <input type="text" class="form-control" name="T1" id="name" placeholder="Votre nom et prenom">
                     </div>
                     <div class="col-md-6 form-group mb-5">
-                        <label for="" class="col-form-label">Prenom *</label>
-                        <input type="text" class="form-control" name="name" id="name" placeholder="Votre prénom">
+                        <label for="" class="col-form-label"> Email*</label>
+                        <input type="text" class="form-control" name="T2" id="email" placeholder="Votre email ">
                       </div>
-                    <div class="col-md-6 form-group mb-5">
-                      <label for="" class="col-form-label">Email *</label>
-                      <input type="text" class="form-control" name="email" id="email"  placeholder="Votre email">
+                    <div class="col-md-8 form-group mb-5">
+                      <label for="" class="col-form-label">Numero de Telephone *</label>
+                      <input type="text" class="form-control" name="T3" id="tel" placeholder="Votre numero de telephone ">
                     </div>
                   </div>
     
                   <div class="row">
                     <div class="col-md-6 form-group mb-5">
                       <label for="" class="col-form-label">Poste *</label>
-                      <input type="text" class="form-control" name="poste" id="post"  placeholder="directeur ">
+                      <input type="text" class="form-control" name="T4" id="post"  placeholder=" votre poste de travail ">
                     </div>
                     <div class="col-md-6 form-group mb-5">
-                      <label for="" class="col-form-label">Nom d'Evénement *</label>
-                      <input type="text" class="form-control" name="company" id="nb-jour"  placeholder="Company  name">
+                      <label for="" class="col-form-label">Nom d'evénement *</label>
+                      <input type="text" class="form-control" name="T5" id="nameev"  placeholder="Ajoute Nom d'evénement ">
                     </div>
                   </div>
     
                   <div class="row">
 				    <div class="col-md-6 form-group mb-5">
 						<label for="" class="col-form-label">Type de Participation *</label>
-						<select class="form-control">
+						<select class="form-control" name="D1"  id="type">
+							<option></option>
 							<option>Invité</option>
-							<option>Nombre d'organisation</option>
+							<option>monbre d'organisation</option>
 							
 						  </select>
                     </div>
 				</div>
                   <div class="row">
                     <div class="col-md-12 form-group">
-                      <input type="submit" value="Envoyer Requete" class="btn btn-primary rounded-0 py-2 px-4">
+                      <input type="submit" value="Envoyer Requete" class="btn btn-primary rounded-0 py-2 px-4" onclick="add()">
                       <span class="submitting"></span>
                     </div>
                   </div>
@@ -211,5 +212,6 @@
 	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
 	<script src="vendor/bootstrap/js/popper.js"></script>
 	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="js/participation.js"></script>
 </body>
 </html>

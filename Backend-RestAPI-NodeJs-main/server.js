@@ -37,6 +37,12 @@ app.get('/', (req, res) => {
 });
 
 require('./app/routes/admin.routes.js')(app);
+require('./app/routes/conge.routes.js')(app);
+require('./app/routes/event.routes.js')(app);
+require('./app/routes/ajoute.routes.js')(app);
+require('./app/routes/stage.routes.js')(app);
+require('./app/routes/parti.routes.js')(app);
+require('./app/routes/empl.routes.js')(app);
 
 
 // listen for requests

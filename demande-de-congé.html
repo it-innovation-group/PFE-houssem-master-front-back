@@ -80,42 +80,39 @@
             <div class="col-md-8">
               <div class="form h-100">
                 <h3>Demande de congé</h3>
-                <form class="mb-5" method="post" id="contactForm" name="contactForm">
+                <form   name="f"  class="mb-5" method="post" id="contactForm" name="contactForm"  onsubmit="return false"  >
                   <div class="row">
-                    <div class="col-md-6 form-group mb-5">
-                      <label for="" class="col-form-label">Nom *</label>
-                      <input type="text" class="form-control" name="name" id="name" placeholder="Votre nom">
+                    <div class="col-md-12 form-group mb-5">
+                      <label for="" class="col-form-label">Nom  et Prenom*</label>
+                      <input type="text" class="form-control" name="T1" id="name"placeholder="Ajoute Votre nom et Prenom ">
                     </div>
-                    <div class="col-md-6 form-group mb-5">
-                        <label for="" class="col-form-label">Prenom *</label>
-                        <input type="text" class="form-control" name="name" id="name" placeholder="Votre prénom">
-                      </div>
+                   
                     <div class="col-md-6 form-group mb-5">
                       <label for="" class="col-form-label">Email *</label>
-                      <input type="text" class="form-control" name="email" id="email"  placeholder="Votre email">
+                      <input type="text" class="form-control" name="T2" id="email"  placeholder="Ajoute Votre email">
                     </div>
                   </div>
     
                   <div class="row">
                     <div class="col-md-6 form-group mb-5">
                       <label for="" class="col-form-label">Numéro de telephone *</label>
-                      <input type="number" class="form-control" name="phone" id="phone"  placeholder="Numéro de telephone ">
+                      <input type="number" class="form-control" name="T3" id="tel"  placeholder=" Ajoute Numéro de telephone ">
                     </div>
                     <div class="col-md-6 form-group mb-5">
                       <label for="" class="col-form-label">Nombre de jour *</label>
-                      <input type="number" class="form-control" name="company" id="nb-jour"  placeholder="nb">
+                      <input type="number" class="form-control" name="T4" id="nbr"  placeholder="nombre de jour  ">
                     </div>
                   </div>
     
                   <div class="row">
                     <div class="col-md-12 form-group mb-5">
                       <label for="Requete" class="col-form-label">Requète *</label>
-                      <textarea class="form-control" name="Requet" id="Requete" cols="30" rows="4"  placeholder=" message"></textarea>
+                      <textarea class="form-control" name="T5" id="reqt" cols="30" rows="4"  placeholder=" message"></textarea>
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-md-12 form-group">
-                      <input type="submit" value="Envoyer Requete" class="btn btn-primary rounded-0 py-2 px-4">
+                      <input type="submit" value="Envoyer Requete" class="btn btn-primary rounded-0 py-2 px-4" onclick="add()"  >
                       <span class="submitting"></span>
                     </div>
                   </div>
@@ -206,7 +203,6 @@
         </div>
       </footer>
   <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
-	<script src="vendor/bootstrap/js/popper.js"></script>
-	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="js/conge.js"></script>
 </body>
 </html>

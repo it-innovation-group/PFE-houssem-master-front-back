@@ -79,19 +79,16 @@
             <div class="col-md-8">
               <div class="form h-100">
                 <h3>Participation d'évenement</h3>
-                <form class="mb-5" method="post" id="contactForm" name="contactForm">
+                <form name="f"  class="mb-5" method="post" id="contactForm" name="contactForm" onsubmit="return false" >
                   <div class="row">
-                    <div class="col-md-6 form-group mb-5">
-                      <label for="" class="col-form-label">Nom *</label>
-                      <input type="text" class="form-control" name="name" id="name" placeholder="Votre nom">
+                    <div class="col-md-12 form-group mb-5">
+                      <label for="" class="col-form-label">Nom et Prenom*</label>
+                      <input type="text" class="form-control" name="T1" id="idee" placeholder="Votre nom et prenom">
                     </div>
-                    <div class="col-md-6 form-group mb-5">
-                        <label for="" class="col-form-label">Prenom *</label>
-                        <input type="text" class="form-control" name="name" id="name" placeholder="Votre prénom">
-                      </div>
+                    
                     <div class="col-md-6 form-group mb-5">
                       <label for="" class="col-form-label">Email *</label>
-                      <input type="text" class="form-control" name="email" id="email"  placeholder="Votre email">
+                      <input type="text" class="form-control" name="T2" id="email"  placeholder="Votre email">
                     </div>
                   </div>
     
@@ -99,28 +96,28 @@
                     
                     <div class="col-md-6 form-group mb-5">
                       <label for="" class="col-form-label">Nom d'Evénement *</label>
-                      <input type="text" class="form-control" name="company" id="nb-jour"  placeholder="Company  name">
+                      <input type="text" class="form-control" name="T3" id="nameev"  placeholder=" Ajoute Nom d'evénement">
                     </div>
                   </div>
 				  <div class="row">
                     <div class="col-md-12 form-group mb-5">
                       <label for="Requete" class="col-form-label">Description *</label>
-                      <textarea class="form-control" name="description" id="description" cols="30" rows="4"  placeholder=" description"></textarea>
+                      <textarea class="form-control" name="description" id="descri" cols="30" rows="4"  placeholder=" description"></textarea>
                     </div>
                   </div>
 				  <div class="row">
                     <div class="col-md-6 form-group mb-5">
                       <label for="" class="col-form-label">Nombre d'organisateurs *</label>
-                      <input type="number" class="form-control" name="nb" id="nb"  placeholder="2 ">
+                      <input type="number" class="form-control" name="T4" id="nbrep"  placeholder="2 ">
                     </div>
                     <div class="col-md-6 form-group mb-5">
                       <label for="" class="col-form-label">Nombre des participants *</label>
-                      <input type="number" class="form-control" name="nb" id="nb"  placeholder="1">
+                      <input type="number" class="form-control" name="T5" id="nbreo"  placeholder="1">
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-md-12 form-group">
-                      <input type="submit" value="Envoyer Requete" class="btn btn-primary rounded-0 py-2 px-4">
+                      <input type="submit" value="Envoyer Requete" class="btn btn-primary rounded-0 py-2 px-4" onclick="add()">
                       <span class="submitting"></span>
                     </div>
                   </div>
@@ -211,7 +208,7 @@
         </div>
       </footer>
 	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
-	<script src="vendor/bootstrap/js/popper.js"></script>
-	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="js/event.js"></script>
+	
 </body>
 </html>

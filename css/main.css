@@ -28,6 +28,121 @@
 /*//////////////////////////////////////////////////////////////////
 [ RESTYLE TAG ]*/
 
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+
+@media (max-width: 60em) {
+  body {
+    padding: 3rem;
+  }
+}
+
+.grid {
+  display: grid;
+  width: 114rem;
+  grid-gap: 6rem;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  align-items: start;
+}
+@media (max-width: 60em) {
+  .grid {
+    grid-gap: 3rem;
+  }
+}
+.grid__item {
+  background-color: #fff;
+  border-radius: 0.4rem;
+  overflow: hidden;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: 0.2s;
+}
+.grid__item:hover {
+  transform: translateY(-0.5%);
+  box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.2);
+}
+p{
+  position: relative;
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.2;
+  letter-spacing: 1px;
+  color: #102770;
+  transform: translate3d(0, 0, 30px) perspective(100px);
+}
+
+
+.tag {
+margin-right:220px;
+  padding: .65em 1.5em;
+  border-radius: 1em;
+  font-size: 1rem;
+}
+
+.tag-red {
+  background: #cb2d3e;
+background: linear-gradient(to bottom, #ef473a, #cb2d3e);
+  color: #fafafa;
+}
+.card__img {
+  display: block;
+  width: 100%;
+  height:20rem;
+  object-fit: cover;
+}
+.card__content {
+  padding: 3rem 3rem;
+}
+.card__header {
+  font-size: 3rem;
+  font-weight: 500;
+  color: #0d0d0d;
+  margin-bottom: 1.5rem;
+}
+.card__text {
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+  line-height: 1.7;
+  color: #3d3d3d;
+  margin-bottom: 2.5rem;
+}
+.card__btn {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  font-size: 2rem;
+  text-align: center;
+  color: #3363ff;
+  background-color: #e6ecff;
+  border: none;
+  border-radius: 0.4rem;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.card__btn span {
+  margin-left: 1rem;
+  transition: 0.2s;
+}
+.card__btn:hover, .card__btn:active {
+  background-color: #dce4ff;
+}
+.card__btn:hover span, .card__btn:active span {
+  margin-left: 1.5rem;
+}
 .speciality{
 	background: #f2f3f5;
 }
@@ -107,11 +222,14 @@ margin-bottom: 10px;
 .service_grids {
 padding: 0 2em;
 }
-
+.img-fluid{
+  padding: 20px;
+  
+}
 
 .vanilla_container {
 	width: 100%;
-	height: 600px;
+	height: 380px;
 	background-image: url(../images/csm_panjin_c2ad083c03.jpg);
 	background-repeat: no-repeat;
 	background-position: center;
@@ -292,7 +410,6 @@ label.error {
 
   text-decoration: none;
 	color: #fdfafa;
-padding-bottom: 20px;
 	line-height: 20px;
 	border-radius: 20px;
 	transition: .6s;
@@ -1130,3 +1247,95 @@ body {
   .card-registration .select-arrow {
   top: 13px;
   }
+  .card {
+    width: 190px;
+    height: 254px;
+    text-align: center;
+   display: flex;
+     align-items: center;
+   justify-content: center;
+     flex-direction: column;
+     gap: 12px;
+    border-radius: 30px;
+    background: #e7f2f3;
+    box-shadow:  13px 13px 37px #adb6b6,
+   -13px -13px 37px #ffffff;
+   }
+   
+   .card > * {
+     margin: 0;
+   }
+   
+   .card__title {
+     color: #333;
+   }
+   
+   .card__content {
+     font-size: 13px;
+     line-height: 18px;
+     color: #333;
+   }
+   
+   
+   
+   
+   
+   
+   .cta {
+    position: relative;
+    margin: auto;
+    padding: 12px 18px;
+    transition: all 0.2s ease;
+    border: none;
+    background: none;
+   }
+   
+   .cta:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 50px;
+    background: #b1dae7;
+    width: 45px;
+    height: 45px;
+    transition: all 0.3s ease;
+   }
+   
+   .cta span {
+    position: relative;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #234567;
+   }
+   
+   .cta svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #234567;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+   }
+   
+   .cta:hover:before {
+    width: 100%;
+    background: #b1dae7;
+   }
+   
+   .cta:hover svg {
+    transform: translateX(0);
+   }
+   
+   .cta:active {
+    transform: scale(0.95);
+   }
+
+   
